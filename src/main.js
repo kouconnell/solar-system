@@ -11,7 +11,7 @@ const scene = new THREE.Scene();
 const textureLoader = new THREE.TextureLoader();
 const sunTexture = textureLoader.load('/solar-system/static/textures/2k_sun.jpg');
 const mercuryTexture = textureLoader.load('/solar-system/static/textures/2k_mercury.jpg');
-const venusTexture = textureLoader.load('/solar-system/static/textures/2k_venus_surface.jpg');
+const venusTexture = textureLoader.load('https://www.solarsystemscope.com/textures/download/2k_venus_surface.jpg', () => console.log('Texture loaded!'), undefined, (err) => console.log('Failed to load texture:', err));
 const earthTexture = textureLoader.load('/solar-system/static/textures/2k_earth_daymap.jpg');
 const marsTexture = textureLoader.load('/solar-system/static/textures/2k_mars.jpg');
 const jupiterTexture = textureLoader.load('/solar-system/static/textures/2k_jupiter.jpg');
